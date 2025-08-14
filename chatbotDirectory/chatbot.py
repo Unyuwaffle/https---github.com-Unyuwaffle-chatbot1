@@ -336,6 +336,7 @@ class ChatbotStream:
         rag_ctx = "\n\n".join(texts)
         self._dbg(f"prepare_rag_context: built context chars={len(rag_ctx)}")
         return rag_ctx
+    
         
     def get_response_from_db_only(self, user_question: str):
         self._dbg("get_response_from_db_only: start")
@@ -446,7 +447,7 @@ if __name__ == "__main__":
                 except Exception as e:
                     print(f"[함수 실행 오류] {func_name}: {e}")
 
-            streamed_response = chatbot._send_request_Stream(temp_context)
+            streamed_response = chatbot.get_response_from_db_only(user_input)
             chatbot.add_response_stream(streamed_response)
  
             print("\n===== Chatbot Context Updated =====")
