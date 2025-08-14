@@ -1,0 +1,18 @@
+[project]
+name = "app"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "dotenv>=0.9.9",
+    "fastapi>=0.116.1",
+    "llama-index>=0.13.0",
+    "olefile>=0.47",
+    "openai>=1.98.0",
+    "pinecone>=7.3.0",
+    "pymongo>=4.13.2",
+    "pytest>=8.4.1",
+    "pytz>=2025.2",
+    "uvicorn>=0.35.0",
+]
